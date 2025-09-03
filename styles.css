@@ -1,13 +1,129 @@
+body {
+    background-color: rgb(255, 81, 81);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title {
+    color: rgb(253, 222, 46);
+    font-family: "Story Script", cursive;
+    font-size: 50px;
+    margin-top: 3%;
+    z-index: 10;
+    text-align: center;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
+    width: 800px;
+    margin: 0 auto;
 
 }
 
-
 .square {
     border: 1px solid #ddd;
+    color: white;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
     flex: 0 0 auto; 
+}
+
+.hovered {
+    background-color: black; 
+}
+
+.frame {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    display: inline-block;
+    margin: 20px auto;
+    border-radius: 20px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+#size-btn {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    border-color: #fff;
+    margin-bottom: 2%;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24   px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#size-btn:hover {
+box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+}
+
+#reset-btn {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    border-color: #fff;
+    margin-bottom: 2%;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24   px;
+    font-family:'Courier New', Courier, monospace;
+}
+#reset-btn:hover {
+box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+}
+
+.knobs {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0; 
+}
+
+.left-knob, .right-knob {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid black;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px; /* Adjusted for text readability */
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.left-knob:hover, .right-knob:hover {
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
 }
